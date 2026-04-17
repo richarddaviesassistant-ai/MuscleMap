@@ -258,6 +258,10 @@ struct BodyRenderer {
             return .color(style.headColor)
         }
         if isSelected {
+            // Preserve the muscle's existing highlight colour so it stays visible in all
+            // colour modes. The selection stroke (drawn separately) makes tapped muscles
+            // clearly identifiable without replacing their recovery-state colour.
+            if let highlight { return highlight.fill }
             return .color(style.selectionColor)
         }
         if let highlight {
