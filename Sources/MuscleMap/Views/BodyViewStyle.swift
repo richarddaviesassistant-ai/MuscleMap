@@ -31,7 +31,7 @@ public struct BodyViewStyle: Sendable {
         selectionStrokeColor: Color = .green,
         selectionStrokeWidth: CGFloat = 2,
         headColor: Color = Color(white: 0.75),
-        hairColor: Color = Color(white: 0.25),
+        hairColor: Color = .clear,
         shadowColor: Color = .clear,
         shadowRadius: CGFloat = 0,
         shadowOffset: CGSize = .zero
