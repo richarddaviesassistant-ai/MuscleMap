@@ -44,8 +44,11 @@ struct BodyViewBox {
     )
 
     static let maleBack = BodyViewBox(
-        origin: CGPoint(x: 860, y: 95),
-        size: CGSize(width: 600, height: 1300)
+        // Original origin (860,95) clipped the left deltoid (paths start at x≈789).
+        // Shifted left by 91 units and widened to 635 so the figure is centred with
+        // ~20 SVG-unit margins on each side (figure spans x≈789–1384).
+        origin: CGPoint(x: 769, y: 95),
+        size: CGSize(width: 635, height: 1300)
     )
 
     static let femaleFront = BodyViewBox(
